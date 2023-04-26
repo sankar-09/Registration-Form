@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<!-- Add CSS file -->
+<link rel="stylesheet" type="text/css" href="l.css">
+<!-- Add JS file -->
+<script type="text/javascript" src="l.js"></script>
+<!-- Add Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>Code Creaters Login Form</h1>
+	<form action="login.jsp" method="post">
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email"><br><br>
+		<label for="password">Password:</label>
+		<div class="password-wrapper">
+			<input type="password" id="password" name="password">
+			<span class="password-toggle" onclick="togglePassword()">
+				<i class="far fa-eye"></i>
+			</span>
+		</div>
+		<br><br>
+		<input type="submit" value="Login">
+	</form>
+	<br>
+	<button onclick="location.href='register.html'">New User</button>
+	<button onclick="location.href='search.jsp'">Search</button>
+	
+	<button onclick="previousForm()">Previous</button>
+	<button onclick="nextForm()">Next</button>
+
+<script>
+	function togglePassword() {
+		var passwordInput = document.getElementById("password");
+		var passwordToggle = document.querySelector(".password-toggle");
+		if (passwordInput.type === "password") {
+			passwordInput.type = "text";
+			passwordToggle.innerHTML = '<i class="far fa-eye-slash"></i>';
+		} else {
+			passwordInput.type = "password";
+			passwordToggle.innerHTML = '<i class="far fa-eye"></i>';
+		}
+	}
+
+	function previousForm() {
+		window.history.back();
+	}
+
+	function nextForm() {
+		window.history.forward();
+	}
+	
+</script>
+</body>
+</html>

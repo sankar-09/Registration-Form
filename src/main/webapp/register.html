@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <!-- Add CSS file -->
+    <link rel="stylesheet" type="text/css" href="r.css">
+    <!-- Add JS file -->
+    <script type="text/javascript" src="r.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Code Creators Student Registration Form</h1>
+    </header>
+    <main>
+      <form action="register_submit.jsp" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="password">Password:</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" name="password" required>
+          <button type="button" class="password-toggle-btn" onclick="togglePasswordVisibility()">
+            <span class="icon">&#x1f441;</span>
+          </button>
+        </div><br><br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+          <option value="" selected disabled>Select Course</option>
+          <option value="Java Fullstack">Java Fullstack</option>
+          <option value="Python Fullstack">Python Fullstack</option>
+          <option value=".Net Fullstack">.Net Fullstack</option>
+          <option value="Web Development">Web Development</option>
+          <option value="C language">C language</option>
+          <option value="Core Java">Core Java</option>
+          <option value="Oracle">Oracle</option>
+          <option value="HTML">HTML</option>
+          <option value="JavaScript">JavaScript</option>
+        </select><br><br>
+        <label for="batch">Batch:</label>
+        <input type="date" id="batch" name="batch" required><br><br>
+        <button type="submit" onclick="showSuccess()">Register</button>
+        <button type="button" onclick="clearForm()">Clear</button>
+        <button type="button" onclick="location.reload()">Refresh</button>
+        <button onclick="location.href='login.html'">Login</button>
+        
+      </form>
+
+      <div class="actions">
+        <form action="search.jsp" method="get">
+          <label for="search">Search:</label>
+          <input type="text" id="search" name="search">
+          <button type="submit">Search</button>
+           
+        </form>
+      
+      </div>
+    </main>
+
+    <script>
+      function togglePasswordVisibility() {
+        var passwordInput = document.getElementById("password");
+        var passwordToggleBtn = document.querySelector(".password-toggle-btn");
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          passwordToggleBtn.innerHTML = '<span class="icon">&#x1f441;</span>';
+        } else {
+          passwordInput.type = "password";
+          passwordToggleBtn.innerHTML = '<span class="icon">&#x1f576;</span>';
+        }}
+         <button onclick="nextForm()">Next</button>

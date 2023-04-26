@@ -1,0 +1,25 @@
+@charset "UTF-8";
+a {
+  color: #fff;
+  background-color: #0077cc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  background-color: #005ea6;
+}
+h1, h2 {
+  text-align: center;
+  color: #0077cc;
+}
+button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
